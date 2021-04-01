@@ -1,5 +1,5 @@
 # FastReport.Blazor.Demo
-## Run your reports in Blazor Server!
+## Run your reports on Blazor Server!
 
 This is an example of displaying reports and exporting to various formats in a Blazor Server application.
 
