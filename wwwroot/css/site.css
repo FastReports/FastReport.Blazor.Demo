@@ -84,7 +84,6 @@ app {
             height: 3rem;
             display: flex;
             align-items: center;
-            line-height: 3rem;
         }
 
             .sidebar .nav-item a.active {
@@ -157,7 +156,6 @@ app {
 
     .sidebar {
         width: 250px;
-        height: 100vh;
         position: sticky;
         top: 0;
     }

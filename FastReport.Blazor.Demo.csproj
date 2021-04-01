@@ -4,4 +4,18 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="FastReport.Core" Version="2021.2.5-demo" />
+    <PackageReference Include="FastReport.Web.Blazor" Version="2021.2.5-demo" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Maps\*.*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Reports\*.*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  
 </Project>

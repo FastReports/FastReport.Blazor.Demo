@@ -1,37 +1,30 @@
-﻿<div class="top-row pl-4 navbar navbar-dark">
-    <a class="navbar-brand" href="">FastReport.Blazor.Demo</a>
-    <button class="navbar-toggler" @onclick="ToggleNavMenu">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+﻿
+<div class="top-row pl-4 navbar navbar-dark">
+    <a class="navbar-brand" href="">FastReport Blazor Demo</a>
 </div>
 
-<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+<div>
     <ul class="nav flex-column">
-        <li class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="oi oi-home" aria-hidden="true"></span> Home
-            </NavLink>
-        </li>
-        <li class="nav-item px-3">
-            <NavLink class="nav-link" href="counter">
-                <span class="oi oi-plus" aria-hidden="true"></span> Counter
-            </NavLink>
-        </li>
-        <li class="nav-item px-3">
-            <NavLink class="nav-link" href="fetchdata">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data
-            </NavLink>
-        </li>
+        @foreach (var folder in Groups)
+        {
+            <li class="nav-item px-2">
+                <a class="nav-item px-2" style="cursor: pointer;" title="@folder.Description" @onclick="() => FolderClick(folder)">
+                    @(folder.Hiden ? "> " : "v ") @folder.FolderName
+                </a>
+                <ul class="nav flex-column" hidden="@folder.Hiden">
+                    @foreach (var report in folder.Reports)
+                    {
+                        <li class="nav-item px-2">
+                            <NavLink class="nav-link" href="@report.File">
+                                @report.FileName
+                            </NavLink>
+                        </li>
+                    }
+                </ul>
+            </li>
+        }
     </ul>
 </div>
 
 @code {
-    private bool collapseNavMenu = true;
-
-    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
-
-    private void ToggleNavMenu()
-    {
-        collapseNavMenu = !collapseNavMenu;
-    }
 }
