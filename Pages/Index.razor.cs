@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
+using FastReport.Web;
 using FastReport.Web.Blazor;
 
 namespace FastReport.Blazor.Demo.Pages
