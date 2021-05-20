@@ -19,7 +19,7 @@ namespace FastReport.Blazor.Demo.Data
             Folders = GetFolderList();
         }
 
-        public List<FolderStruct> Folders { get; }
+        public IReadOnlyList<FolderStruct> Folders { get; }
 
         private List<FolderStruct> GetFolderList()
         {

@@ -5,8 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="FastReport.Core" Version="2021.2.11-demo" />
-    <PackageReference Include="FastReport.Web.Blazor" Version="2021.2.11-demo" />
+    <PackageReference Include="FastReport.Core" Version="2021.3.0-demo" />
+    <PackageReference Include="FastReport.Web" Version="2021.3.0-demo" />
   </ItemGroup>
 
   <ItemGroup>
