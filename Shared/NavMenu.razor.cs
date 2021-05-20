@@ -11,7 +11,7 @@ namespace FastReport.Blazor.Demo.Shared
 {
     public partial class NavMenu
     {
-        private readonly List<FolderStruct> Groups;
+        private readonly IReadOnlyList<FolderStruct> Groups;
 
         public NavMenu()
         {

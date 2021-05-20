@@ -28,7 +28,6 @@ namespace FastReport.Blazor.Demo
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
-            services.AddSingleton<ReportList>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
